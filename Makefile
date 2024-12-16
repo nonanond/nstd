@@ -20,7 +20,7 @@ BUILD_DIR := $(PROJ_DIR)/build
 
 all: $(BUILD_DIR)/main
 
-$(BUILD_DIR)/main: nstd.cpp main.cpp
+$(BUILD_DIR)/main: nstd/concepts.cpp nstd.cpp main.cpp
 	${CXX} -std=c++23 -fmodules-ts -o $@ $^ -L${LIB_PATH}
 
 clean:
